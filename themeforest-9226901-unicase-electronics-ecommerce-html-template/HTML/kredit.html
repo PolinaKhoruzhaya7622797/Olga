@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="windows-1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+        integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+        crossorigin="anonymous"></script>
+</head>
+<body ng-app>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalName" aria-hidden="true">Рассрочка</button>
+    <div class="modal fade" id="ModalName" tabindex="-1" role="dialog" aria-labelledby="ModalNameLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+
+                    </button>
+                    <h3 class="modal-title" id="ModalNameLabel1">Рассрочка</h3>
+                </div>
+                <div class="modal-body"> 
+                    <small>Мы предоставляем нашим клиентам покупку техники в рассрочку. Вам достаточно просто ввести сумму платежа и желаемое количество месяцев для оплаты, и Вы получите сумму, которую Вам необходимо будет выплачивать каждый месяц. За получением рассрочки обращайтесь в фирменные магазины или по телефону, указанному на сайте.
+                    </small>
+                        <br /><br />
+                    <label><b>Сумма покупки</b></label><br />
+                    <input type="number" ng-model="cost" data-ng-init="value='0'"/><br />
+                    <label><b>Кол-во месяцев</b></label><br />
+                    <input type="number" step="1" min="2" ng-model="qty" data-ng-init="value='0'"/><br />
+                     <b>Оплата в месяц составит</b> {{(1.1*cost) / qty}} <b>Br</b><br /> 
+                </div>
+                <div class="modal-footer">
+                   <center><p>O•P•I</p></center>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
